@@ -1,0 +1,24 @@
+#rojo{
+	background-color: red;
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+}
+#verde{
+	background-color: green;
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+}
+.cuadrados{
+	background-color: pink;
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+}
+.textom{
+	color: #575757;
+}
+.textoa{
+	color: blue;
+}
