@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Martes</title>
+</head>
+<body>
+ 	<script type="text/javascript">
+		var contador = 1;
+ 		const CrearHijo = function(){
+ 			const nuevo_hijo = document.createElement("div");
+ 			nuevo_hijo.style.width = "30%";
+ 			nuevo_hijo.style.height = "30px";
+ 			nuevo_hijo.style.border = "1px solid purple";
+ 			nuevo_hijo.style.display = "inline-block";
+ 			nuevo_hijo.innerText = "hijo" + contador;
+ 			contador++;
+ 			return nuevo_hijo;
+ 		}
+ 		const contenedor = document.createElement("div");
+ 		contenedor.style.width = "600px";
+ 		contenedor.style.height = "600px";
+ 		contenedor.style.border = "1px solid black";
+
+ 		const titulo = contenedor.cloneNode(true);
+ 		titulo.style.height = "30px";
+ 		titulo.innerText = "hola";
+ 		titulo.style.textAlign = "center";
+
+ 		const divizq = document.createElement("div");
+ 		divizq.style.width = "298px";
+ 		divizq.style.height = "300px";
+ 		divizq.style.border = "1px solid red";
+ 		divizq.style.display = "inline-block";
+
+ 		const condicional = 10;
+ 		const num_aleatorio = Math.floor(Math.random()*10);	
+ 		for (var variable = 1; variable <= condicional; variable++) {
+ 			var hijo_automatico = CrearHijo();
+
+ 			divizq.appendChild(hijo_automatico);
+ 			if(variable === 10){
+ 				hijo_automatico.style.backgroundColor = "yellow";
+ 			}
+ 			else if(variable === 2){
+ 				hijo_automatico.style.backgroundColor = "orange";
+ 			}
+ 			if (variable === num_aleatorio){
+ 				hijo_automatico.style.backgroundColor = "violet";
+ 			}
+ 		}
+
+ 		const divder = document.createElement("div");
+ 		divder.style.width = "298px";
+ 		divder.style.height = "300px";
+ 		divder.style.border = "1px solid blue";
+ 		divder.style.display = "inline-block";
+
+
+ 		contenedor.appendChild(titulo);
+ 		contenedor.appendChild(divizq);
+ 		contenedor.appendChild(divder);
+ 		document.body.appendChild(contenedor);
+ 	</script>
+</body>
+</html>
